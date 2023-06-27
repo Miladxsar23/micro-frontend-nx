@@ -10,6 +10,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@nrwl/node": "^16.4.0",
     "@nx/cypress": "16.4.0",
     "@nx/eslint-plugin": "16.4.0",
     "@nx/js": "16.4.0",
