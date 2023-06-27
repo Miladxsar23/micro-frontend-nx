@@ -1,3 +1,4 @@
-export * from './lib/entities';
-export * from './lib/models';
+export * from './lib/Database';
+export * from './lib/Entities';
+export * from './lib/Models';
 
