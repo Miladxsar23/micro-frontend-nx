@@ -3,11 +3,11 @@ import { Column, Entity, ObjectId, ObjectIdColumn } from 'typeorm';
 @Entity()
 export class Post {
   @ObjectIdColumn()
-  id!: ObjectId;
+  id: ObjectId;
 
   @Column()
-  title!: string;
+  title: string;
 
   @Column()
-  content!: string;
+  content: string;
 }
