@@ -8,9 +8,11 @@
     "@swc/helpers": "~0.5.0",
     "axios": "^1.0.0",
     "express": "~4.18.1",
+    "mongodb": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "typeorm": "^0.3.17"
   },
   "devDependencies": {
     "@nrwl/node": "^16.4.0",
@@ -29,7 +31,8 @@
     "@testing-library/react": "14.0.0",
     "@types/express": "~4.17.13",
     "@types/jest": "^29.4.0",
-    "@types/node": "18.14.2",
+    "@types/mongodb": "^4.0.7",
+    "@types/node": "^18.14.2",
     "@types/react": "18.2.13",
     "@types/react-dom": "18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
