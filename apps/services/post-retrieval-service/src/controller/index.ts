@@ -1,7 +1,6 @@
-import { Post } from '@org/post/utility';
+import { Post, dataSource } from '@org/post/utility';
 import { Request, Response, Router } from 'express';
 import { ObjectId } from 'mongodb';
-import { dataSource } from '../db';
 const postRepository = dataSource.getMongoRepository(Post);
 const router = Router();
 // Get all posts or getting filtered posts
