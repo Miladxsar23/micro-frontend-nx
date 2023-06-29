@@ -1,4 +1,4 @@
-import { dbConfig } from '@org/shared/utility';
+import { dbConfig } from '@org/post/utility';
 import { DataSource } from 'typeorm';
 
 export const dataSource = new DataSource({

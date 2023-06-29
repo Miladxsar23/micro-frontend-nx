@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@org/post/utility": ["libs/post/utility/src/index.ts"],
       "@org/shared/utility": ["libs/shared/utility/src/index.ts"]
     }
   },

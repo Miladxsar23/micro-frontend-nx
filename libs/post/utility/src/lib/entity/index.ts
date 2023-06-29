@@ -5,9 +5,12 @@ export class Post {
   @ObjectIdColumn()
   id: ObjectId;
 
-  @Column()
+  @Column('text')
   title: string;
 
-  @Column()
+  @Column('text')
   content: string;
+
+  @Column({type:'boolean', default:true})
+  active = true
 }
