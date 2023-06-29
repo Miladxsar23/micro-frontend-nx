@@ -1,6 +1,6 @@
-import { DataSourceOptions } from 'typeorm';
+import { DataSource, DataSourceOptions } from 'typeorm';
 import { Post } from '../entity';
-export const dbConfig: DataSourceOptions = {
+const dbConfig: DataSourceOptions = {
   type: 'mongodb',
   host: 'localhost',
   port: 27017,
@@ -9,3 +9,5 @@ export const dbConfig: DataSourceOptions = {
   entities: [Post],
   synchronize: true,
 };
+
+export const dataSource = new DataSource({ ...dbConfig });

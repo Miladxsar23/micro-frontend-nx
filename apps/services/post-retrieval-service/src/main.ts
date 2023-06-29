@@ -1,7 +1,7 @@
+import { dataSource } from '@org/post/utility';
 import express from 'express';
 import 'reflect-metadata';
 import postController from './controller';
-import { dataSource } from './db';
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 

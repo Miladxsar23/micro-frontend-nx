@@ -11,6 +11,6 @@ export class Post {
   @Column('text')
   content: string;
 
-  @Column({type:'boolean', default:true})
+  @Column('boolean', {default: true})
   active = true
 }
