@@ -1,25 +1,25 @@
-import { Heights, Widths } from '@org/shared/utility';
+import { Typography } from '@material-tailwind/react';
 import * as React from 'react';
 /* eslint-disable-next-line */
 export interface LogoProps {
-  width: Widths;
-  height: Heights;
-  companyName:string
+  companyName: string;
 }
 
-export function Logo({ width, height, companyName }: LogoProps) {
+export function Logo({companyName }: LogoProps) {
   return (
-    <section className={`${width} ${height} flex items-center justify-center gap-2`}>
+    <section
+      className="flex items-center gap-1"
+    >
       {/* logo image */}
-      <div className='relative h-full w-1/3 bg-blue-gray-200 rounded-md flex justify-center items-center'>
-        <div className='w-1/3 h-1/3 rounded-full bg-indigo-700'></div>
+      <div className="relative  rounded-md flex justify-center items-center">
+        <div className="w-8 h-8 bg-gradient-to-b from-white to-blue-gray-200 rounded-lg flex justify-center items-center">
+          <div className='w-5 h-5 rounded-full bg-indigo-600'></div>
+        </div>
       </div>
       {/*logo title  */}
-      <div className='w-2/3'>
-        {companyName}
-      </div>
+      <Typography variant="paragraph" className="hidden md:block font-bold text-lg text-gray-900">{companyName}</Typography>
     </section>
-  )
+  );
 }
 
 export default React.memo(Logo);
