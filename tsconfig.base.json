@@ -16,6 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@org/auth/utility": ["libs/auth/utility/src/index.ts"],
+      "@org/post/feature": ["libs/post/feature/src/index.ts"],
+      "@org/post/ui": ["libs/post/ui/src/index.ts"],
       "@org/post/utility": ["libs/post/utility/src/index.ts"],
       "@org/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@org/shared/utility": ["libs/shared/utility/src/index.ts"]

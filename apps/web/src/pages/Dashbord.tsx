@@ -1,5 +1,6 @@
+import { Posts } from '@org/post/feature'
 export function DashbordPage() {
-  return <h1>dashbord page</h1>
+  return <Posts />
 }
 
 
