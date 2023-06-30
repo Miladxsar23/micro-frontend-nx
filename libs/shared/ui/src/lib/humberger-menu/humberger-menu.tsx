@@ -1,9 +1,10 @@
+import * as React from 'react';
 import { useCallback } from 'react';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 import Drawer from '../drawer/drawer';
 import Menu from '../menu/menu';
 /* eslint-disable-next-line */
-export interface HumbergerMenuProps {
+interface HumbergerMenuProps {
   className?: string;
   isMenuOpen: boolean;
   onToggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -28,7 +29,7 @@ export function HumbergerMenu({
         isMenuOpen={isMenuOpen}
         headerTitle="Utilited Logo"
       >
-        <Menu orientation='vertical'/>
+        <Menu orientation="vertical" onToggleMenu={onToggleMenu}/>
       </Drawer>
     </section>
   );

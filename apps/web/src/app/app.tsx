@@ -1,8 +1,8 @@
-import { Layout } from "@org/shared/ui";
+import AppRoutes from "../routes";
 
 export function App() {
   return (
-    <Layout  />
+    <AppRoutes  />
   );
 }
 
