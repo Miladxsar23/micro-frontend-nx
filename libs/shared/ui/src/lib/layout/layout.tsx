@@ -1,13 +1,15 @@
-import styles from './layout.module.css';
-
+import Footer from '../footer/footer';
+import Header from '../header/header';
+import Main from '../main/main';
 /* eslint-disable-next-line */
-export interface LayoutProps {}
 
-export function Layout(props: LayoutProps) {
+export function Layout() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to Layout!</h1>
-    </div>
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
   );
 }
 
