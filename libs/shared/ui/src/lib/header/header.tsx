@@ -16,7 +16,7 @@ export function Header({ className = '' }: HeaderProps) {
       {/* Navbar */}
       <section className="flex-auto flex items-center gap-2">
         <Logo companyName="Utilited UI" />
-        <Menu className="hidden md:flex" />
+        <Menu className="hidden md:flex" onToggleMenu={setMenuOpen}/>
       </section>
       {/* Searchbar & UserProfile */}
       <section className="flex justify-end w-1/2 items-center gap-3 md:gap-1">

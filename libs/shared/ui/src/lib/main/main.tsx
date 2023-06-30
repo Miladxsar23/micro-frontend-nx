@@ -1,13 +1,13 @@
-
+import { Outlet } from 'react-router-dom';
 /* eslint-disable-next-line */
 export interface MainProps {
-  className?:string
+  className?: string;
 }
 
-export function Main({className = ''}: MainProps) {
+export function Main({ className = '' }: MainProps) {
   return (
-    <main className={`${className}`}>
-      <h1>Welcome to Main!</h1>
+    <main className={`${className} px-8`}>
+      <Outlet />
     </main>
   );
 }
