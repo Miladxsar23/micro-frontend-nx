@@ -1,12 +1,21 @@
-import styles from './search-bar.module.css';
+import { RiSearchLine } from 'react-icons/ri';
 
-/* eslint-disable-next-line */
-export interface SearchBarProps {}
+interface SearchBarProps {
+  className?:string
+  placeholder: string;
+}
 
-export function SearchBar(props: SearchBarProps) {
+function SearchBar({ placeholder, className='' }: SearchBarProps) {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to SearchBar!</h1>
+    <div className={`flex items-center relative h-10 ${className} `}>
+      <input
+        type="text"
+        placeholder={placeholder}
+        className="w-full py-1 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-sm placeholder:text-blue-gray-600"
+      />
+      <div className="absolute left-3">
+        <RiSearchLine className="w-4 h-4 text-blue-gray-400" />
+      </div>
     </div>
   );
 }

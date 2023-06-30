@@ -1,13 +1,14 @@
-import styles from './main.module.css';
 
 /* eslint-disable-next-line */
-export interface MainProps {}
+export interface MainProps {
+  className?:string
+}
 
-export function Main(props: MainProps) {
+export function Main({className = ''}: MainProps) {
   return (
-    <div className={styles['container']}>
+    <main className={`${className}`}>
       <h1>Welcome to Main!</h1>
-    </div>
+    </main>
   );
 }
 

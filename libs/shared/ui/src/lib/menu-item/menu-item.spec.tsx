@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import SearchBar from './search-bar';
+import MenuItem from './menu-item';
 
-describe('SearchBar', () => {
+describe('MenuItem', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<SearchBar />);
+    const { baseElement } = render(<MenuItem />);
     expect(baseElement).toBeTruthy();
   });
 });
