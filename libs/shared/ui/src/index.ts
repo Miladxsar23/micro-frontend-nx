@@ -1,3 +1,4 @@
+export * from './lib/pagination/pagination';
 export * from './lib/menu-item/menu-item';
 export * from './lib/humberger-menu/humberger-menu';
 export * from './lib/drawer/drawer';
