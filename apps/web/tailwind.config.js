@@ -1,17 +1,19 @@
-const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
 const { join } = require('path');
+const withMT = require('@material-tailwind/react/utils/withMT');
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = withMT({
   content: [
     join(
       __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+      '{src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
+    join(__dirname, '../../libs/**/!(*.stories|*.spec).{ts,tsx,html}'),
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-};
+});
