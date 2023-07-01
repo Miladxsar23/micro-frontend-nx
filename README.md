@@ -64,6 +64,7 @@ Choose one of the following methods to get the project up and running on your lo
 3. Build and start the containers: `docker-compose up --build`
 4. The retrieval post service application will be accessible at `http://localhost:3000`
 5. The management post service application will be accessible at `http://localhost:3001`
+6. The react app application will be accessible at `http://localhost:4200`
 
 
 ### Running without Docker Compose (local MongoDB)
@@ -72,18 +73,15 @@ Choose one of the following methods to get the project up and running on your lo
 2. Change to the project directory: `cd project-directory`
 3. Install dependencies: `npm install`
 4. Install Nx cli: `npm i nx -g`
-5. Install docker on your local system
-6. Pull the MongoDB Docker Image: `docker pull mongodb/mongodb-community-server`
-7. Run the Image as a Container: `docker run --name mongo -p 27017:27017 -d mongodb/mongodb-community-server:latest`
-8. Start the backend service server: `nx serve <projectName>`
-9. The application will be accessible at `http://localhost:<servicePort>`
+5. Start the backend service server: `nx serve <projectName>`
+6. The application will be accessible at `http://localhost:<appPort>`
 
 ### Database
 
 If you are running the application without Docker Compose, follow these additional steps to set up the MongoDB database:
 
-1. Install and configure MongoDB on your machine.
-2. Create a new database for the project.
+1. Install and configure MongoDB on your machine via docker [Mongodb installation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/).
+2. run `docker run --name mongo -d mongodb/mongodb-community-server:latest` in the terminal.
 3. Update the database connection settings in the backend configuration files.
 
 ## Configuration
@@ -92,18 +90,6 @@ The project configuration can be found in the following files:
 
 - `apps/services/post-management-service/.env.local` - post-management-service variables
 - `apps/services/post-retrieval-service/.env.local` - post-management-service variables
+-`apps/libs/post/utility/.env.local` - dataSource variables
 
 Make sure to update the configuration files with the appropriate values for your environment.
-
-## API Documentation
-
-[Provide information on how to access and use the API documentation, if applicable]
-
-
-## Contact
-
-[Provide your contact information or a link to the project's communication channels]
-
----
-
-Feel free to customize the sections and add more details according to your project's specific requirements.
