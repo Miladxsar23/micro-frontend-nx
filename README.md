@@ -8,7 +8,6 @@ The main objective of this project was to implement a microservice architecture 
 
 The project's codebase has been organized into smaller, reusable libraries that encapsulate specific functionality. This approach promotes code maintainability and allows for the separation of concerns based on business logic domains. The libraries can be shared and utilized across different applications, enhancing code reuse and reducing development time.
 
-## Features
 
 ## Features
 
