@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  # React App
+  react:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+    command: npx nx serve web --host=0.0.0.0
+    ports:
+      - 4200:4200
+
+  # Post-retrieval Service
+  post-retrieval:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+    command: npx nx serve services-post-retrieval-service  --host=0.0.0.0
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_HOST=mongo
+      - HOST=0.0.0.0
+
+  # Post-management Service
+  post-management:
+    extends:
+      file: docker-compose.base.yml
+      service: nx-app-base
+    command: npx nx serve services-post-management-service --host=0.0.0.0
+    ports:
+      - 3001:3001
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_HOST=mongo
+      - HOST=0.0.0.0
+
+  # mongo
+  mongo:
+    image: mongodb/mongodb-community-server:latest
+    container_name: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABASE=admin
+
+volumes:
+  mono-node-modules: null
