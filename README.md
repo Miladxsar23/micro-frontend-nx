@@ -92,3 +92,8 @@ The project configuration can be found in the following files:
 -`apps/libs/post/utility/.env.local` - dataSource variables
 
 Make sure to update the configuration files with the appropriate values for your environment.
+
+
+## Access to services api
+
+you can access to the services with `username=admin` and `password=admin` also if you are using Postman just set this header attribute: `Authorization` : `Basic YWRtaW46YWRtaW4=`
