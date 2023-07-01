@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+
 /* eslint-disable-next-line */
 export interface MainProps {
   className?: string;
