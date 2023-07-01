@@ -1,15 +1,17 @@
 import { Button, Typography } from '@material-tailwind/react';
 import { PostInterface } from '@org/shared/utility';
+import * as React from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
 import defaultPostImage from '../assets/postImage.png';
 /* eslint-disable-next-line */
-export interface PostProps  {
-  post:PostInterface,
-  onSetPost:() => void
+export interface PostProps {
+  post: PostInterface;
+  onSetPost: () => void;
 }
 
-export function Post({
-  post : {content, title, writer, imageUrl, date, categoryName}, onSetPost
+export const Post = React.memo(function ({
+  post: { content, title, writer, imageUrl, date, categoryName },
+  onSetPost,
 }: PostProps) {
   return (
     <section className="w-full flex flex-col gap-6">
@@ -36,19 +38,28 @@ export function Post({
           </figcaption>
         </figure>
       </div>
+      {/* title */}
       <div className="w-full">
         <Typography variant="h4">{title}</Typography>
       </div>
+      {/* content */}
       <div className="w-full">
-        <Typography variant="paragraph" className='text-sm text-gray-500'>{content}</Typography>
+        <Typography variant="paragraph" className="text-sm text-gray-500">
+          {content}
+        </Typography>
       </div>
-      <div className=''>
-      <Button variant="text" className="flex items-center gap-2" onClick={onSetPost}>
-        Read More <BsArrowUpRight strokeWidth={1} className="h-3 w-3" />
-      </Button>
+      {/* Action -> view post */}
+      <div className="">
+        <Button
+          variant="text"
+          className="flex items-center gap-2"
+          onClick={onSetPost}
+        >
+          Read More <BsArrowUpRight strokeWidth={1} className="h-3 w-3" />
+        </Button>
       </div>
     </section>
   );
-}
+});
 
 export default Post;
