@@ -14,7 +14,7 @@ export function PostList({ filteredPosts, onSetDialogPost, onOpenDialog }: PostL
       onSetDialogPost(post)
       onOpenDialog()
     },
-    [onSetDialogPost]
+    [onSetDialogPost, onOpenDialog]
   );
   const memoPostEl = useMemo(() => {
     return filteredPosts.map((post) => {
@@ -24,7 +24,7 @@ export function PostList({ filteredPosts, onSetDialogPost, onOpenDialog }: PostL
         </section>
       );
     });
-  }, [filteredPosts]);
+  }, [filteredPosts, handleSetDialogPost]);
   return (
     <section className="grid grid-cols-1 md:grid-cols-12 gap-6">
       {memoPostEl}

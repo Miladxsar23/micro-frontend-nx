@@ -8,7 +8,7 @@ export function Posts() {
   const [activePage, setActivePage] = useState(1);
   const memoPosts = useMemo(() => {
     return posts;
-  }, [posts]);
+  }, []);
   const handleOpenDialog = useCallback(() => setOpenDialog(true), []);
   const handleCloseDialog = useCallback(() => setOpenDialog(false), []);
   const handleSetPost = useCallback(

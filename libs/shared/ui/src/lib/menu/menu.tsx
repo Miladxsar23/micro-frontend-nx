@@ -37,7 +37,7 @@ export function Menu({
         />
       );
     });
-  }, [memoMenuItems]);
+  }, [memoMenuItems, handleClose]);
   return <nav className={`${className} ${flowStyle}`}>{memoMenuItemsEl}</nav>;
 }
 
