@@ -1,3 +1,4 @@
+import { authMiddleware } from '@org/auth/utility';
 import { dataSource } from '@org/post/utility';
 import express from 'express';
 import 'reflect-metadata';
@@ -9,12 +10,12 @@ const app = express();
 dataSource
   .initialize()
   .then(() => {
-    console.log("dataSource is initilized")
+    console.log('dataSource is initilized');
   })
   .catch((error) => console.log(`error in database connection: ${error}`));
 
-  app.use(express.json());
-  app.use('/', postController);
-  app.listen(port, host, () => {
-    console.log(`[ ready ] http://${host}:${port}`);
-  });
+app.use(express.json());
+app.use('/', authMiddleware, postController);
+app.listen(port, host, () => {
+  console.log(`[ ready ] http://${host}:${port}`);
+});
